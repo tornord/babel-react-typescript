@@ -1,0 +1,45 @@
+{
+  "name": "babel-react-typescript",
+  "version": "1.0.0",
+  "description": "Basic Babel setup with React and Typescript",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib -x '.ts,.tsx' --source-maps true src",
+    "build:watch": "babel -d lib -x '.ts,.tsx' -w --source-maps true src",
+    "test": "npm run build && mocha 'lib/**/*.test.js'",
+    "start": "node lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tornord/babel-react-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tornord/babel-react-typescript/issues"
+  },
+  "homepage": "https://github.com/tornord/babel-react-typescript#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.18",
+    "@types/pretty": "^2.0.0",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "pretty": "^2.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
